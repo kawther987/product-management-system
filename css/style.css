@@ -1,0 +1,32 @@
+body {
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../top-view-colorful-easter-eggs-heart-shaped-plate-with-kitchen-utensils-paint-brushes.jpg"); */
+  background-image: linear-gradient(to right bottom, #af2655, #ff90bc);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+label {
+  font-weight: 500;
+  font-size: 18px;
+  color: beige;
+}
+.btn-form {
+  background-color: beige;
+  color: #af2655;
+  border: 2px solid transparent;
+  font-size: 18px;
+  transition: 0.5s all ease-in-out;
+}
+.btn-form:hover {
+  background-color: transparent;
+  border-color: beige;
+  color: beige;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 700;
+  color: beige;
+  text-shadow: 2px 2px 7px #000;
+}
+.table>:not(caption)>*>*{
+  color: #af2655;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Managment</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <div class="w-75 m-auto p-3 rounded-3">
+      <!-- <h1 class="text-center">CRUD SYSTEM</h1> -->
+      <h1 class="text-center">Product Managment System</h1>
+
+      <div>
+        <label for="pName">Prduct Name : </label>
+        <input
+          type="text"
+          class="form-control"
+          id="pName"
+          oninput="validationName()"
+        />
+      </div>
+      <div
+        class="alert alert-danger d-none w-50 m-auto text-center mt-3"
+        id="nameMsg"
+      >
+        Enter from 3 to 8 characters
+      </div>
+      <div class="my-3">
+        <label for="pPrice">Prduct Price : </label>
+        <input
+          type="number"
+          class="form-control"
+          id="pPrice"
+          oninput="validatinPrice()"
+        />
+      </div>
+      <div
+        class="alert alert-danger d-none w-50 m-auto text-center mt-3"
+        id="priceMsg"
+      >
+        Enter from 2 to 5 digits
+      </div>
+      <div>
+        <label for="pCatogry">Prduct Category : </label>
+        <input
+          type="text"
+          class="form-control"
+          id="pCatogry"
+          oninput="validatinCategory()"
+        />
+      </div>
+      <div
+        class="alert alert-danger d-none w-50 m-auto text-center mt-3"
+        id="catogryMsg"
+      >
+        Enter tv or labtop or mobile ...
+      </div>
+      <div class="py-3">
+        <label for="pDisc">Prduct Discription : </label>
+        <textarea
+          class="form-control"
+          id="pDisc"
+          oninput="validatinDescripition()"
+        >
+        </textarea>
+      </div>
+      <div
+        class="alert alert-danger d-none w-50 m-auto text-center mt-3"
+        id="dicsMsg"
+      >
+        Enter from 3 to 250 characters
+      </div>
+      <button class="btn btn-form mt-3 w-25" id="addBtn" onclick="addProduct()">
+        Add Product
+      </button>
+      <button
+        class="btn btn-form mt-3 w-25 d-none"
+        id="updateBtn"
+        onclick="updateProduct()"
+      >
+        Update Product
+      </button>
+
+      <input
+        id="searchInput"
+        oninput="search()"
+        type="search"
+        class="form-control my-4 mb-3 w-100 m-auto"
+        placeholder="search by Name..."
+      />
+      <table class="table text-center table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+      </table>
+    </div>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
