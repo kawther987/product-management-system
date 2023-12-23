@@ -19,7 +19,7 @@ if (localStorage.getItem("products") != null) {
 }
 
 function addProduct() {
-  if (validationName() && validatinPrice() && validatinCategory()) {
+  if (validationName() && validatinPrice() && validatinCategory()&&validatinDescripition()) {
     var product = {
       name: pName.value,
       price: pPrice.value,

@@ -27,6 +27,24 @@ h1 {
   color: beige;
   text-shadow: 2px 2px 7px #000;
 }
-.table>:not(caption)>*>*{
+.table > :not(caption) > * > * {
   color: #af2655;
+}
+.form-control:focus {
+  box-shadow:unset;
+  border-color: unset;
+}
+
+@media screen and (max-width: 750px) {
+  #updateBtn,
+  #addBtn,
+  .alert {
+    width: 100% !important;
+  }
+  .table .btn {
+    font-size: 11px;
+  }
+  .table > :not(caption) > * > * {
+    font-size: 13px;
+  }
 }
